@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-bruh
+  name: test-deploy
 spec:
-  replicas: 2        # changed from 1 → 2
+  replicas: 1
   selector:
     matchLabels:
       app: test
@@ -13,5 +13,7 @@ spec:
         app: test
     spec:
       containers:
-        - name: test
-          image: nginx:1.25   # changed from nginx:latest → nginx:1.25
+        - name: whalesay
+          image: docker/whalesay:latest
+          command: ["/bin/sh", "-c"]
+          args: ["while true; do echo 'Hello from Whalesay!'; sleep 10; done"]
