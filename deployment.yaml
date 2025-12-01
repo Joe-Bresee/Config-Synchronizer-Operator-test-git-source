@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: test-deploy
 spec:
-  replicas: 1
+  replicas: 2        # changed from 1 → 2
   selector:
     matchLabels:
       app: test
@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: test
-          image: nginx:latest
+          image: nginx:1.25   # changed from nginx:latest → nginx:1.25
