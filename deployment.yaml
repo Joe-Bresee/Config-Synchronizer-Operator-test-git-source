@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-deploy
+  name: test-bruh
 spec:
   replicas: 2        # changed from 1 → 2
   selector:
