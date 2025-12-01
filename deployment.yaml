@@ -13,7 +13,5 @@ spec:
         app: test
     spec:
       containers:
-        - name: whalesay
-          image: docker/whalesay:latest
-          command: ["/bin/sh", "-c"]
-          args: ["while true; do echo 'Hello from Whalesay!'; sleep 10; done"]
+        - name: test
+          image: nginx:latest   # changed from nginx:latest → nginx:1.25
